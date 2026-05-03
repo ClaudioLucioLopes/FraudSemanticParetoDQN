@@ -1,0 +1,23 @@
+# Results and temporary files
+results/
+all-MiniLM-L6-v2/
+results copy/
+textos/
+__pycache__/
+*.pkl
+*.npy
+*.csv
+!requirements.txt
+
+# Cache directories
+cache/
+cache_credit/
+cache_improved/
+
+# Data
+data/
+
+# Plot scripts (as requested to exclude)
+plot_native_execution.py
+plot_roc_pr_curves.py
+plot_variance_boxplot.py
