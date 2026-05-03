@@ -8,11 +8,21 @@ The core of this repository is a **Pareto-DQN** agent that approximates the Pare
 
 ### Key Components
 
-- **`ParetoDQN.py`**: Implementation of the Hypervolume-based Pareto agent and its neural network approximators.
-- **`FraudMOEnv.py`**: A Multi-Objective Environment for fraud detection scenarios.
-- **`FraudDataHandlerImproved.py`**: Data preprocessing pipeline featuring semantic embedding generation (using `sentence-transformers`).
-- **`StandardDQN.py`**: A baseline scalar DQN implementation for performance comparison.
-- **`FraudBaselineXGB.py`**: A baseline XGBoost classifier for benchmarking.
+#### Fraud Detection
+- **`FraudParetoDQN.py`**: Main entry point for training the Pareto-DQN agent on fraud data.
+- **`FraudMOEnv.py`**: Multi-objective environment specifically for fraud detection scenarios.
+- **`FraudDataHandlerImproved.py`**: Advanced data preprocessing featuring semantic embeddings.
+- **`FraudBaselineXGB.py`**: XGBoost baseline for performance benchmarking.
+
+#### Credit Scoring & Risk Analysis
+- **`CreditParetoDQN.py`**: Implementation of the Pareto-DQN agent for credit-related datasets.
+- **`CreditMOEnv.py`**: Multi-objective environment for credit risk and return optimization.
+- **`CreditDataHandler.py`**: Data pipeline for credit scoring datasets.
+- **`CreditBaselineXGB.py`**: Baseline classifier for credit tasks.
+
+#### Core Engine & Utilities
+- **`ParetoDQN.py`**: Core implementation of the Hypervolume-based Pareto agent.
+- **`StandardDQN.py`**: Reference scalar DQN implementation.
 
 ## Architecture
 
@@ -32,16 +42,14 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Training the Pareto-DQN Agent
-```bash
-python FraudParetoDQN.py
-```
+### Training the Agents
+- **Fraud Detection**: `python FraudParetoDQN.py`
+- **Credit Scoring**: `python CreditParetoDQN.py`
 
 ### Running Baselines
-```bash
-python FraudStandardDQN.py
-python FraudBaselineXGB.py
-```
+- **Fraud Baseline**: `python FraudBaselineXGB.py`
+- **Credit Baseline**: `python CreditBaselineXGB.py`
+- **Scalar DQN**: `python FraudStandardDQN.py` or `python CreditStandardDQN.py`
 
 ### Generating Visualizations
 ```bash
