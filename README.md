@@ -51,10 +51,6 @@ pip install -r requirements.txt
 - **Credit Baseline**: `python CreditBaselineXGB.py`
 - **Scalar DQN**: `python FraudStandardDQN.py` or `python CreditStandardDQN.py`
 
-### Generating Visualizations
-```bash
-python plot_roc_pr_curves.py
-```
 
 ## Repository Structure
 
